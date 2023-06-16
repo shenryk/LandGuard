@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
-import openai
+# import openai
 from .models import Question
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 
 from .forms import CreateUserForm
 # openai.api_key = "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 my open ai key"
@@ -38,6 +39,9 @@ def registerpage(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username') 
+            messages.success(request,'Account created for' + user )
+            return redirect('login')
 
     context = {'form':form}
 

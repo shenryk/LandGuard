@@ -1,4 +1,40 @@
-// code for  a navbar in html
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+<style>
+.nav-box {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+
+  transform: translate(-60%, -150%);
+}
+.nav-bar--list,
+.contact-list {
+  list-style: none;
+  display: block;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.nav_link:link {
+  text-decoration: none;
+  color: rgb(46, 42, 42);
+}
+.nav_link:hover {
+  color: rgb(31, 172, 34, 0.8);
+}
+.nav_link:visited {
+  color: rgb(46, 42, 42);
+}
+</style>
+<header class="header">
+    <div class="nav-box">
+      <nav class="nav-bar">
+        <ul class="nav-bar--list">
+          <li><a class="nav_link" href="#">Home</a></li>
+          <li><a class="nav_link" href="#">About</a></li>
+          <li><a class="nav_link" href="#">Services</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 

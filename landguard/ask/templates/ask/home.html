@@ -1,41 +1,39 @@
-{% extends 'main.html' %}
+{% include 'main.html' %}
 
 {% block content %}
-
-<div class="container">
-    <div class="ask-section">
-        <h1 style="text-align: center;">Land Guard</h1>
-       
-    </div>
-    <br>
-    <br> 
-    <div class="row" style="display: flex;">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <a href="#"><strong class="card-text">Land Services</strong></a>
-            </div>
+    <section class="land-guard">
+      <div class="heading-class">
+        <h1 class="heading heading--primary">LAND GUARD</h1>
+      </div>
+      <div class="input__search">
+        <form action="input" class="search-form">
+          <input
+            type="text"
+            placeholder="Ask anything about land organiser"
+            class="search-form--input"
+          />
+          <span class="search-icon">&#128269;</span>
+        </form>
+      </div>
+      <div class="cards">
+        <div class="cards-row">
+          <div class="row row--land-service">
+            <h3 class="heading heading-tertiary">LAND SERVICES</h3>
+            <p class="paragraph"></p>
+          </div>
+          <div class="row row--land-service">
+            <h3 class="heading heading-tertiary">LAND WATER</h3>
+            <p class="paragraph"></p>
+          </div>
+          <div class="row row--land-service">
+            <h3 class="heading heading-tertiary">LAND ADVERTS</h3>
+            <p class="paragraph"></p>
+          </div>
+          <div class="row row--land-locator">
+            <h3 class="heading heading-tertiary">LAND LOCATOR</h3>
+            <p class="paragraph"></p>
+          </div>
         </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-            <a href="#"><strong class="card-text">Land Locator</strong></a>
-            </div>
-        </div>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <a href="#"><strong class="card-text">Land Advert</strong></a>
-                </div>
-            </div>
-    </div>
-        
-        
-        
-    </div>
-    
-</div>
-
-
+      </div>
+    </section>
 {% endblock content %}
